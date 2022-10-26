@@ -1,0 +1,57 @@
+:root {
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DarkCyan: hsl(184, 100%, 22%);
+  --VeryDarkCyan: hsl(179, 100%, 13%);
+  --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+  --VeryLightGray: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: black;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  max-width: 720px;
+  margin-top: 150px;
+}
+p {
+  color: var(--TransparentWhite);
+  font-size: 15px;
+}
+button {
+  background-color: var(--BrightOrange);
+}
+.columns {
+  font-family: "Lexend Deca";
+  padding: 25px;
+  max-width: 720px;
+}
+.category {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  color: var(--VeryLightGray);
+}
+.first {
+  background-color: var(--BrightOrange);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.second {
+  background-color: var(--DarkCyan);
+}
+.third {
+  background-color: var(--VeryDarkCyan);
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
