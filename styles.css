@@ -22,7 +22,8 @@ p {
   font-size: 15px;
 }
 button {
-  background-color: var(--BrightOrange);
+  background-color: inherit;
+  border-radius: 15px;
 }
 .columns {
   font-family: "Lexend Deca";
