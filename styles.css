@@ -6,53 +6,135 @@
   --VeryLightGray: hsl(0, 0%, 95%);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+  display: flex;
+  height: 100vh;
+  overflow: auto;
 }
+
 main {
   display: flex;
-  max-width: 720px;
-  margin-top: 150px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
+
 p {
   color: var(--TransparentWhite);
   font-size: 15px;
+  line-height: 1.5rem;
 }
+
 button {
+  position: absolute;
+  font-family: inherit;
+  color: inherit;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  padding: 15px;
+  width: 140px;
+  border-radius: 25px;
+  border: 2px solid var(--TransparentWhite);
+  transition: all 0.2s ease-in;
+  bottom: 45px;
+}
+
+button:hover {
   background-color: inherit;
-  border-radius: 15px;
-}
-.columns {
-  font-family: "Lexend Deca";
-  padding: 25px;
-  max-width: 720px;
-}
-.category {
-  font-family: "Big Shoulders Display";
-  text-transform: uppercase;
+  cursor: pointer;
   color: var(--VeryLightGray);
 }
-.first {
+
+h1 {
+  font-family: "Big Shoulders Display";
+  color: var(--VeryLightGray);
+  margin-bottom: 1.5rem;
+}
+
+.columns {
+  max-width: 280px;
+  height: 450px;
+  font-family: "Lexend Deca";
+  padding: 40px;
+  position: relative;
+}
+
+.vehicleimg {
+  margin-bottom: 30px;
+}
+
+.sedan {
   background-color: var(--BrightOrange);
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+  border-radius: 10px 0 0 10px;
+  color: var(--BrightOrange);
 }
-.second {
+
+.suv {
   background-color: var(--DarkCyan);
+  color: var(--DarkCyan);
 }
-.third {
+
+.lux {
   background-color: var(--VeryDarkCyan);
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 0 10px 10px 0;
+  color: var(--VeryDarkCyan);
 }
 
 .attribution {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  color: var(--TransparentWhite);
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+a:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 845px) {
+  body {
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding: 20px 0;
+    flex-direction: column;
+  }
+
+  .sedan {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .lux {
+    border-radius: 0 0 10px 10px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .attribution {
+    position: relative;
+
+    padding-bottom: 10px;
+  }
 }
